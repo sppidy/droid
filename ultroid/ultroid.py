@@ -33,3 +33,6 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
     
 print("Ultroid has been deployed! Visit @TheUltroid for updates!!")
+
+if __name__ == "__main__":
+    ultroid.run_until_disconnected()
