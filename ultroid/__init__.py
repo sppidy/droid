@@ -3,7 +3,7 @@ import ultroid
 from . import utils
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from .dB import *
+from dB.database import Var
 
 if Var.SESSION:
     ultroid = TelegramClient(StringSession(Var.SESSION), Var.API_ID, Var.API_HASH)
