@@ -4,7 +4,7 @@ from . import *
 import logging
 
 async def start(ult):
-    await bot.start(ult)
+    await ultroid.start(ult)
     ultroid.me = await ultroid.get_me() 
     ultroid.uid = telethon.utils.get_peer_id(ultroid.me)
 
@@ -22,6 +22,7 @@ if BOT_TOKEN is not None:
     ultroid.loop.run_until_complete(start(Var.BOT_USERNAME))
     print("Done, startup completed")
 else:
+    print("Starting User Mode...")
     ultroid.start()
 
 path = "ultroid/plugins/*.py"
