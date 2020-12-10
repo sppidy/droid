@@ -1,5 +1,4 @@
 import os, sys
-#import ultroid
 from . import utils
 from telethon.sessions import StringSession
 from telethon import TelegramClient
@@ -14,6 +13,8 @@ from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 import asyncio
 from requests import get
+
+ENV = os.environ.get("ENV", False)
 
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
