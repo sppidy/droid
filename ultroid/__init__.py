@@ -10,8 +10,6 @@ if STRING_SESSION:
 else:
     quit(1)
 
-ENV = os.environ.get("ENV", False)
-
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 import asyncio
