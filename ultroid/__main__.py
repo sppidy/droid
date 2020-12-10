@@ -3,7 +3,7 @@ from pathlib import Path
 from . import *
 import logging
 
-async def start(ult):
+async def ultroid(ult):
     await ultroid.start(ult)
     ultroid.me = await ultroid.get_me() 
     ultroid.uid = telethon.utils.get_peer_id(ultroid.me)
@@ -16,10 +16,10 @@ ultroid.asst = None
 print("Initialising...")
 if BOT_TOKEN is not None:
     print("Setting up assistant...")
-    ultroid.asst = TelegramClient("BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(ult=Var.BOT_TOKEN)
+    ultroid.asst = TelegramClient("BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
     print ("Assistant loaded.")
     print("Starting Ultroid UserBot!")
-    ultroid.loop.run_until_complete(start(Var.BOT_USERNAME))
+    ultroid.loop.run_until_complete(ultroid(Var.BOT_USERNAME))
     print("Done, startup completed")
 else:
     print("Starting User Mode...")
