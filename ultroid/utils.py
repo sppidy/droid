@@ -12,3 +12,4 @@ def load_plugins(plugin_name):
     spec.loader.exec_module(load)
     sys.modules["ultroid.plugins." + plugin_name] = load
     print("Ultroid has Imported " + plugin_name)
+    mod.ultroid = ultroid
