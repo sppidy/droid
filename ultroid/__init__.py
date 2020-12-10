@@ -36,5 +36,10 @@ if bool(ENV):
             "Please remove the line mentioned in the first hashtag from the config.env file"
         )
         quit(1)
+    API_ID = int(os.environ.get("API_ID", 9))
+    API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
+    SESSION = os.environ.get("STRING_SESSION", None)
+    DB_URI = os.environ.get("DATABASE_URL", None)
 else:
     PLACEHOLDER = None
