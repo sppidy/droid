@@ -1,6 +1,6 @@
 import glob
 from pathlib import Path
-from ultroid import ultroid
+import ultroid
 from ultroid.utils import load_plugins
 import logging
 
