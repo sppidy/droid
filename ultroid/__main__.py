@@ -16,7 +16,7 @@ ultroid.asst = None
 print("Initialising...")
 if BOT_TOKEN is not None:
     print("Setting up assistant...")
-    ultroid.asst = TelegramClient("Var.BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(ult=Var.BOT_TOKEN)
+    ultroid.asst = TelegramClient("Var.BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(Var.BOT_TOKEN)
     print ("Assistant loaded.")
     print("Starting Ultroid UserBot!")
     ultroid.loop.run_until_complete(start(Var.BOT_USERNAME))
