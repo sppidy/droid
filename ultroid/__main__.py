@@ -1,7 +1,6 @@
 import glob
 from pathlib import Path
-import ultroid
-from ultroid.utils import load_plugins
+from . import load_plugins
 import logging
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
