@@ -5,7 +5,7 @@ from var import Var
 os.system("pip install --upgrade pip")
 
 if Var.STRING_SESSION:
-    bot = TelegramClient(StringSession(Var.STRING_SESSION), Var.APP_ID, Var.API_HASH)
+    ultroid = TelegramClient(StringSession(Var.STRING_SESSION), Var.APP_ID, Var.API_HASH)
 else:
     quit(1)
 
