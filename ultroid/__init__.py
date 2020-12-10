@@ -7,7 +7,7 @@ from .dB.database import Var
 if Var.SESSION:
     ultroid = TelegramClient(StringSession(Var.SESSION), Var.API_ID, Var.API_HASH)
 else:
-    print("lol") //checking if this is the issue
+    print("lol") #checking if this is the issue
     quit(1)
 
 from logging import basicConfig, getLogger, INFO, DEBUG
