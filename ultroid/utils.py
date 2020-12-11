@@ -3,7 +3,7 @@ import logging
 import importlib
 from pathlib import Path
 
-def load_module(plugin_name):
+def load_plugins(plugin_name):
     if plugin_name.startswith("__"):
         pass
     elif plugin_name.endswith("_"):
