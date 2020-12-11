@@ -3,6 +3,7 @@ from pathlib import Path
 from . import *
 import logging
 from telethon import TelegramClient
+import telethon.utils
 
 async def start(ult):
     await ultroid.start(ult)
