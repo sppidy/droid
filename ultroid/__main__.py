@@ -4,6 +4,7 @@ from . import *
 import logging
 from telethon import TelegramClient
 import telethon.utils
+from ultroid.utils import load_plugins
 
 async def start(ult):
     await ultroid.start(ult)
