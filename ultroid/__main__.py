@@ -11,7 +11,6 @@ async def ultroid(ult):
 async def bot_info(BOT_TOKEN):
     asstinfo = await asst.get_me()
     bot_name = asstinfo.username
-    return bot_name
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -22,7 +21,6 @@ print("Initialising...")
 if BOT_TOKEN is not None:
     print("Setting up assistant...")
     ultroid.asst = TelegramClient("BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
-    bot_name = await bot_info(Var.BOT_TOKEN)
     print ("Assistant loaded.")
     print("Starting Ultroid UserBot!")
     ultroid.loop.run_until_complete(ultroid(bot_name))
