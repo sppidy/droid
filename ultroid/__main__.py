@@ -2,6 +2,7 @@ import glob
 from pathlib import Path
 from . import *
 import logging
+from telethon import TelegramClient
 
 async def start(ult):
     await ultroid.start(ult)
