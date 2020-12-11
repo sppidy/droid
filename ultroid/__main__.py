@@ -8,7 +8,7 @@ async def ultroid(ult):
     ultroid.me = await ultroid.get_me() 
     ultroid.uid = telethon.utils.get_peer_id(ultroid.me)
 
-async def bot_info(event):
+async def bot_info(BOT_TOKEN):
     asstinfo = await asst.get_me()
     bot_name = asstinfo.username
     return bot_name
@@ -22,7 +22,7 @@ print("Initialising...")
 if BOT_TOKEN is not None:
     print("Setting up assistant...")
     ultroid.asst = TelegramClient("BOT_TOKEN",api_id=Var.API_ID,api_hash=Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
-    bot_name = bot_name
+    bot_name = await bot_info(Var.BOT_TOKEN)
     print ("Assistant loaded.")
     print("Starting Ultroid UserBot!")
     ultroid.loop.run_until_complete(ultroid(bot_name))
