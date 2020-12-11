@@ -23,3 +23,6 @@ def load_plugins(plugin_name):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.ultroid = ultroid
+        sys.plugins["ultroid.plugins."+ shortname] = mod
+        print("Successfully (re)imported "+ shortname)
+
